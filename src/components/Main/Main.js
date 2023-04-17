@@ -5,48 +5,65 @@ import vcIcon from "../../assests/Logo Sample.png";
 import settingIcon from "../../assests/setting.svg";
 import personIcon from "../../assests/personIcon.png";
 import logo from "../../assests/Logo.png";
+import { Mic } from "../icons/Mic";
+import { Camera } from "../icons/Camera";
 
 function Main() {
   return (
     <div className="container">
-      <Row className="header">
+      <div className="header">
         <div className="vcIcon-container">
           <img className="vc-icon" src={vcIcon}></img>
-        </div>
-        <Col>
-          <div className="header-discription">
-            <div className="header-time">23 March 2023, 2:04 PM</div>
-            <div className="header-setting">
-              <img className="settings-icon" src={settingIcon}></img>
-            </div>
-            <div className="header-avtar">
-              <img className="person-icon" src={personIcon}></img>
-            </div>
+        </div>  
+        <div className="header-discription">
+          <p className="header-time">23 March 2023, 2:04 PM</p>
+          <div className="header-setting">
+            <img className="settings-icon" src={settingIcon}></img>
           </div>
-        </Col>
-      </Row>
-      <Container>
+          <div className="header-avtar">
+            <img className="person-icon" src={personIcon}></img>
+          </div>
+        </div>
+      </div>
+      <div className="main-content">
         <div className="content">
           <div className="sidebar-content">
-            <div className="sidebar-logo">
-              <img className="logo" src={logo}></img>
+            <div className="sidebar-main">
+              <div className="sidebar-logo">
+                <img className="logo" src={logo}></img>
+              </div>
+              <div className="sidebar-heading">
+                <p>Secure video conferencing</p>
+                <p>For everyone</p>
+              </div>
+              <Stack className="sidebar-buttons" direction="horizontal" gap={4}>
+                <Button variant="primary" className="home-button">
+                  New Meeting
+                </Button>
+                <Button variant="dark" className="home-button">
+                  Sign in
+                </Button>
+              </Stack>
+              <div className="sidebar-link">Create your account</div>
             </div>
-            <div className="sidebar-heading">
-              <div>Secure video conferencing</div>
-              <div>For everyone</div>
+            <div className="version-text">
+              <p>Version 1.0</p>
             </div>
-            <Stack className="sidebar-buttons" direction="horizontal" gap={4}>
-              <Button variant="primary">New Meeting</Button>
-              <Button variant="dark">Sign in</Button>
-            </Stack>
-            <div className="sidebar-link"></div>
           </div>
 
           <div className="image-container">
             <img className="preview" src={personIcon} height="100px"></img>
+            <div className="home-action-container">
+              <div className="home-action-icons">
+                <Mic color="#ffffff" />
+              </div>
+              <div className="home-action-icons">
+                <Camera color="#ffffff" />
+              </div>
+            </div>
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   );
 }

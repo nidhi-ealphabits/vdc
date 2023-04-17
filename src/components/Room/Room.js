@@ -10,8 +10,12 @@ function Room() {
   return (
     <>
       <Header />
+      <div style={{ zIndex: 1 }}> */}
       <CardGrid/>
-      <Bottombar />
+      </div>
+      {/* <div style={{ zIndex: 1 }}> */}
+        <Bottombar />
+      {/* </div> */}
     </>
   );
 }

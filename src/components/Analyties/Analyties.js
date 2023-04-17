@@ -4,8 +4,6 @@ import { PieChart } from "react-minimal-pie-chart";
 import "./analyties.css";
 import Logo from "../../assests/Logo.png";
 import DatatablePage from "./DatatablePage";
-import Bottombar from "../Bottombar/Bottombar";
-import Header from "../Header/Header";
 
 function Analyties() {
   const dataMock = [
@@ -19,9 +17,15 @@ function Analyties() {
     fontFamily: "sans-serif",
   };
   return (
-    <div>
-      <Header/>
     <div className="container">
+      <Row className="analyties-header mt-3">
+        <Col className="logo-container">
+          <img className="sgvp-logo" src={Logo} alt="d"></img>
+        </Col>
+        <Col className="mt-3">
+          <div className="analyties-text">Team Meeting</div>
+        </Col>
+      </Row>
       <Row className="analyties-content mt-3" >
         <Col className="col-md-4 chart-container">
           <div className="pie-chart">
@@ -33,12 +37,10 @@ function Analyties() {
           </div>
         </Col>
         <Col className="col-md-8 list-container">
-          <div className="analyties-table"><DatatablePage  /></div>
+          <div className="analyties-table"><DatatablePage responsive/></div>
         
         </Col>
       </Row>
-    </div>
-    <Bottombar/>
     </div>
   );
 }

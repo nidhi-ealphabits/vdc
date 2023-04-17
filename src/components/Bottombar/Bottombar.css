@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: rgb(240,240, 240);
   padding: 10px;
   position: fixed;
   bottom: 0;
@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #ccc;
+  background-color: #fff;
   height: 45px;
   border-radius: 18px;
   padding: 0 8px;
@@ -47,7 +47,7 @@
   justify-content: space-evenly;
   align-items: center;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 .activities .call-container {
@@ -73,7 +73,7 @@
   width: 45px;
   height: 45px;
   align-items: center;
-  background-color: #ccc;
+  background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -93,7 +93,7 @@
     order: 1;
     margin-right: auto;
     margin-left: 8px;
-    background-color: #ccc;
+    background-color: #fff;
     border-radius: 50%;
     width: 40px;
     height: 40px;
@@ -140,3 +140,5 @@
     height: 40px;
   }
 }
+
+
